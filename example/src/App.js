@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 
-import ExampleComponent from 'iconical-tab-nav'
+import IconicalTabNav from 'iconical-tab-nav'
 
 export default class App extends Component {
-  render () {
+  render() {
     return (
       <div>
-        <ExampleComponent text='Modern React component module' />
+        <IconicalTabNav tabs={[{ label: 'Home', icon: 'home' }, { label: 'Favourites', icon: 'favorite' }]} showLabels/>
       </div>
     )
   }

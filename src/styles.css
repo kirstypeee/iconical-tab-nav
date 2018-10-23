@@ -1,8 +1,48 @@
 /* add css styles here (optional) */
 
-.test {
-  display: inline-block;
-  margin: 2em auto;
-  border: 2px solid #000;
-  font-size: 2em;
+.itn-container {
+  display: flex;
+  background-color: white;
+}
+
+.itn-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+  flex: 1;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+
+.itn-tab:hover {
+  background-color: #dfe3e6;
+}
+
+.itn-tab .itn-tab-label {
+  display: flex;
+  color: #8897a2;
+  font-size: inherit !important;
+  margin: 2px;
+}
+
+.selected-tab .itn-tab-label {
+  color: #008673;
+}
+
+.md-18 {
+  font-size: 18px;
+}
+
+.md-24 {
+  font-size: 24px;
+}
+
+.md-36 {
+  font-size: 36px;
+}
+
+.md-48 {
+  font-size: 48px;
 }
