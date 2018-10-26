@@ -4,6 +4,10 @@
 
 [![NPM](https://img.shields.io/npm/v/iconical-tab-nav.svg)](https://www.npmjs.com/package/iconical-tab-nav) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
+## Demo
+
+Check out the [demo](https://kirstypeee.github.io/iconical-tab-nav/).
+
 ## Install
 
 ```bash
