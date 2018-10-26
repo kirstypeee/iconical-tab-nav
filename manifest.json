@@ -1,0 +1,8 @@
+{
+  "short_name": "iconical-tab-nav",
+  "name": "iconical-tab-nav",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
