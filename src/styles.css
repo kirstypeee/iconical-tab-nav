@@ -1,4 +1,15 @@
 /* add css styles here (optional) */
+.wrapper-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+}
+
+.contentContainer {
+  display: flex;
+  overflow: hidden;
+}
 
 .itn-container {
   display: flex;
@@ -25,6 +36,7 @@
   color: #8897a2;
   font-size: inherit !important;
   margin: 2px;
+  transition: color ease 0.3s;
 }
 
 .selected-tab .itn-tab-label {

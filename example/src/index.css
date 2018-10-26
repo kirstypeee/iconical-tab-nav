@@ -1,5 +1,74 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Oxygen+Mono');
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background: #f0f4f4;
+}
+
+.itn-header {
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(to left top, #9b82f3, #7f8af7, #6191f7, #3f97f4, #009bef);
+  padding: 4em;
+  padding-bottom: 12em;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.itn-header .logo {
+  width: 14em;
+}
+
+h1 {
+  color: #e1ebf7;
+  font-weight: 600;
+  font-size: 42px;
+  font-family: 'Amatic SC', cursive;
+}
+
+h2 {
+  font-family: 'Oxygen Mono', monospace;
+}
+
+.author {
+  color: #e1ebf7;
+  font-weight: 600;
+  font-size: 20px;
+  font-family: 'Amatic SC', cursive;
+  margin-top: 1em;
+}
+
+.itn-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: calc(90% - 4em);
+  margin: auto;
+  margin-top: calc(-100px - 1em);
+}
+
+.itn-container {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 15px;
+  padding: 2em;
+  margin: 1em 0;
+}
+
+.itn-demo-container {
+  border: 2px solid black;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.itn-demo-text {
+  font-family: 'Oxygen Mono', monospace;
+  margin: 2em;
 }

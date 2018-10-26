@@ -1,4 +1,6 @@
 declare namespace styles {
+	const wrapperContainer: string
+	const contentContainer: string
 	const itnContainer: string
 	const itnTab: string
 	const itnTabLabel: string
