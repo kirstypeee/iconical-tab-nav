@@ -21,11 +21,13 @@
     "predeploy": "cd example && npm install && npm run build",
     "deploy": "gh-pages -d example/build"
   },
+  "dependencies": {
+    "react-pose": "^3.3.7"
+  },
   "peerDependencies": {
     "prop-types": "^15.5.4",
     "react": "^15.0.0 || ^16.0.0",
-    "react-dom": "^15.0.0 || ^16.0.0",
-    "react-pose": "^3.3.7"
+    "react-dom": "^15.0.0 || ^16.0.0"
   },
   "devDependencies": {
     "@types/jest": "^23.1.5",
