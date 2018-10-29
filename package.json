@@ -5,6 +5,17 @@
   "author": "kirstypeee",
   "license": "MIT",
   "repository": "kirstypeee/iconical-tab-nav",
+  "keywords": [
+    "react",
+    "navigation",
+    "tabs",
+    "react-component",
+    "tab",
+    "tab navigation",
+    "icons",
+    "iconical",
+    "material"
+  ],
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
