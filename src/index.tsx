@@ -1,5 +1,6 @@
 /**
  * @class IconicalTabNav
+ * @type React.Component
  */
 
 import posed, { PoseGroup } from 'react-pose';
@@ -31,10 +32,10 @@ export type Props = {
   tabs: Tab[]
   showLabels?: boolean
   hideIcons?: boolean
-  containerStyles: ContainerStyles
-  labelStyles: LabelStyles
-  tabStyles: TabStyles
-  selectedStyles: TabStyles
+  containerStyles?: ContainerStyles
+  labelStyles?: LabelStyles
+  tabStyles?: TabStyles
+  selectedStyles?: TabStyles
   hoverColor?: string
   selected?: number
   iconSize?: string
@@ -96,26 +97,26 @@ export default class IconicalTabNav extends React.Component<Props, State> {
 
     return (
       <div className={styles.wrapperContainer} style={{ flexDirection: reverse ? `column-reverse` : `column` }}>
-        <div className={styles.itnContainer} style={containerStyles}>
+        <div id="itn-container" className={styles.itnContainer} style={containerStyles}>
           {tabs.map((tab: Tab, i: number) => {
             const selected = this.state.selected === i;
             const color = selected ? selectedColor : defaultColor;
             const combinedStyles = selected ? { ...selectedStyles, ...tabStyles } : tabStyles;
             return (
-              <div className={styles.itnTab + ` ${selected ? styles.selectedTab : ''}`}
+              <div id="tab" className={styles.itnTab + ` ${selected ? styles.selectedTab : ''}`}
                 onClick={() => { this.setState({ selected: i }) }}
                 onMouseOver={(event) => event.currentTarget.style.backgroundColor = hoverColor || null}
                 onMouseOut={(event) => event.currentTarget.style.backgroundColor = (tabStyles && tabStyles.backgroundColor) || 'transparent'}
                 style={combinedStyles}>
                 {!hideIcons &&
-                  <span className={styles.itnTabLabel} style={{ ...labelStyles, color: color }}>
-                    <i className={`material-icons ${iconSize && styles[iconSizeClass[iconSize]]}`}>
+                  <span id="icon-label" className={styles.itnTabLabel} style={{ ...labelStyles, color: color }}>
+                    <i id="icon" className={`material-icons ${iconSize && styles[iconSizeClass[iconSize]]}`}>
                       {tab.icon}
                     </i>
                   </span>
                 }
                 {showLabels &&
-                  <span className={styles.itnTabLabel} style={{ ...labelStyles, color: color }}>
+                  <span id="text-label" className={styles.itnTabLabel} style={{ ...labelStyles, color: color }}>
                     {tab.label}
                   </span>}
               </div>
@@ -125,7 +126,7 @@ export default class IconicalTabNav extends React.Component<Props, State> {
         <PoseGroup>
           {tabs.map((tab: Tab, i: number) => {
             return (
-              this.state.selected === i && <ContentContainer className={styles.contentContainer} key={i}>
+              this.state.selected === i && <ContentContainer id="content-container" className={styles.contentContainer} key={i}>
                 {tab.render()}
               </ContentContainer>)
           })}

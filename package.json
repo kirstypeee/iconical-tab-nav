@@ -1,6 +1,6 @@
 {
   "name": "iconical-tab-nav",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Tab Navigation component that can be either text or icon based",
   "author": "kirstypeee",
   "license": "MIT",
@@ -16,6 +16,15 @@
     "iconical",
     "material"
   ],
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "identity-obj-proxy"
+    }
+  },
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
@@ -33,7 +42,9 @@
     "deploy": "gh-pages -d example/build"
   },
   "dependencies": {
-    "react-pose": "^3.3.7"
+    "react-pose": "^3.3.7",
+"merge": ">=1.2.1",
+"webpack-dev-server": ">=3.1.11"
   },
   "peerDependencies": {
     "prop-types": "^15.5.4",
@@ -41,13 +52,19 @@
     "react-dom": "^15.0.0 || ^16.0.0"
   },
   "devDependencies": {
+    "@types/enzyme": "^3.1.14",
+    "@types/enzyme-adapter-react-16": "^1.0.3",
     "@types/jest": "^23.1.5",
     "@types/react": "^16.3.13",
     "@types/react-dom": "^16.0.5",
     "babel-core": "^6.26.3",
     "babel-runtime": "^6.26.0",
     "cross-env": "^5.1.4",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
+    "enzyme-to-json": "^3.3.4",
     "gh-pages": "^1.2.0",
+    "identity-obj-proxy": "^3.0.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-scripts-ts": "^2.16.0",
